@@ -8,15 +8,15 @@ module.exports = function(grunt) {
       files: ['Gruntfile.js', 'src/**/*.js'],
       options : { jshintrc: true }
     },
-    jstools : {
-      merge : {
-        src : ['<%= dependency %>'],
+    concat : {
+      concat : {
+        src : ["src/angular-visible.js"],
         dest : "dist/<%=pkg.name%>.js",
         level : "nocomment"
       },
       min : {
-        src : ['<%= dependency %>'],
-        dest : "dist/<%=pkg.name%>_min.js",
+        src : ["src/angular-visible.js"],
+        dest : "dist/<%=pkg.name%>.min.js",
         level : "min"
       }
     }
@@ -27,8 +27,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-jstools');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['jshint', 'jstools']);
+  grunt.registerTask('default', ['jshint', 'concat']);
 };

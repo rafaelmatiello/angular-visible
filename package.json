@@ -1,13 +1,13 @@
 {
   "name": "angular-visible",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Check if DOM elements are out of window.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sculove/angualr-visible.git"
+    "url": "https://github.com/rafaelmatiello/angular-visible.git"
   },
   "keywords": [
     "angular",
@@ -18,13 +18,16 @@
   "author": "sculove",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sculove/angualr-visible/issues"
+    "url": "https://github.com/rafaelmatiello/angular-visible/issues"
   },
-  "homepage": "https://github.com/sculove/angualr-visible",
+  "homepage": "https://github.com/rafaelmatiello/angular-visible",
   "main": "./dist/angular-visible",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-jstools": "^1.1.1"
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-jstools": "^1.1.1",
+    "grunt-merge-json": "^0.9.6"
   }
 }
