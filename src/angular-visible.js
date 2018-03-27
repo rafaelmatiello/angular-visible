@@ -75,6 +75,10 @@ angular.module("angular-visible", []).directive("checkVisible", function () {
                 scope.$on("runCheckVisible", function (e) {
                     o.check();
                 });
+				
+				scope.$on('$stateChangeSuccess', function(){
+					o.check();
+				});
             };
         }
     };
